@@ -8,10 +8,11 @@ body
     font-family: 'Rubik', sans-serif
     font-weight: 400
     font-size: 18px
-    line-height: 24px
+    line-height: 21px
     background-color: $black
     min-width: 320px
     min-height: 100vh
+    overflow-x: hidden
 .container
     width: 100%
     max-width: 1312px
@@ -28,6 +29,34 @@ body
     clip: rect(0 0 0 0)
     clip-path: inset(50%)
     margin: -1px
+.orange
+    color: $primary
+.title
+    font-weight: 700
+    font-size: 48px
+    line-height: 57px
+.btn
+    width: 258px
+    height: 56px
+    border-radius: 7px
+    border: 1px solid
+    background-color: $primary
+    font-weight: 400
+    font-size: 18px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 16px 32px
+    color: $black
+    transition: all 0.3s
+    cursor: pointer
+    text-decoration: none
+    &:hover, &:focus
+        background: none 
+        border-color: $primary
+        color: $primary
+    &:active
+        opacity: 0.6
 ul
     list-style: none
 a
@@ -87,12 +116,13 @@ a
         display: flex
         li
             margin: 0 20px
+            line-height: 24px
 
 /* PROVOCATION */
 /* =========== */
 .provocation
     background: $primary url(../img/bg.jpg) center / cover no-repeat
-    padding: 103px 0 116px
+    padding: 103px 0 95px
     min-height: 790px
     color: $black
     &__inner
@@ -125,3 +155,65 @@ a
         position: absolute
         top: -47px
         right: -29px
+
+/* INFO */
+/* =========== */
+.info
+    background-color: $secondary
+    color: $white
+    padding: 112px  0
+    &__header
+        margin-bottom: 73px
+    &__title
+        text-align: center
+    &__list
+        max-width: 1083px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+    &__item
+        text-align: center
+        &:first-child
+            padding-top: 103px
+        &:last-child
+            padding-top: 111px
+        &:nth-child(2)
+            .info__text
+                margin-top: 38px
+                font-size: 36px
+                line-height: 43px
+                .orange
+                    font-size: 24px
+                    line-height: 28px
+                    margin-top: 8px
+    &__text
+        margin-top: 77px
+        span
+            display: block
+    &__price
+        margin-bottom: 55px
+    &__price--old
+        font-size: 36px
+        line-height: 43px
+        color: $grey
+        position: relative
+        &::after
+            $add: 26px
+            $width: calc(100% + $add)
+            content: ""
+            position: absolute
+            top: calc(50%)
+            left: calc( 50% - ($width/2) )
+            background: #ADADAD
+            border-radius: 0.5px
+            width: $width
+            height: 2px
+    &__price--new
+        font-size: 48px
+        line-height: 57px
+        margin-left: 42px
+    &__footer
+
+    &__btn
+        margin: 66px auto 0

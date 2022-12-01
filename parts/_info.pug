@@ -1,0 +1,24 @@
+mixin article(src, alt='ингредиент', textWhite, textOrange)
+    li.info__item 
+        if block
+            block
+        img(src=src alt=alt)&attributes(attributes)
+        p.info__text 
+            span= textWhite
+            span.orange= textOrange
+
+article.info 
+    .container 
+    header.info__header 
+        h2.info__title.title ПОЛУЧИ ЗАЩИТУ ИММУНИТЕТА
+        p.info__title.title.orange СО СКИДКОЙ -15% ПЕРВЫМ!
+    ul.info__list 
+        +article('./img/ginger.png', 'имбирь', 'Содержит', 'имбирь')(width="193" heihgt="168")
+        +article('./img/nootris.png', 'баночка NOOTRIS', '+ Бесплатная доставка', 'Специальная цена')(width="480" heihgt="160")
+            .info__price
+                span.info__price--old 750₽
+                span.info__price--new 690₽
+        +article('./img/virus.png', 'вирус', 'Нейтрализует', 'вирусы')(width="192" heihgt="160")
+            
+    footer.info__footer 
+        button.btn.info__btn Оформить заказ!
