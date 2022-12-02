@@ -1,0 +1,142 @@
+@import vars
+@media screen and (max-width: 1400px)
+    .container 
+        max-width: 1140px
+    .provocation
+        &__title
+            font-size: 120px
+            width: 80%
+        &__subtext
+            position: relative
+            z-index: 1
+            
+@media screen and (max-width: 1200px)
+    .container 
+        max-width: 960px
+        padding: 0 15px
+    .mob-btn
+        display: block
+    .mob-menu
+        $offset: 80px
+        background: $secondary
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        padding: 20px
+        position: fixed
+        max-width: 320px
+        width: 100%
+        height: calc(100vh - $offset)
+        left: -100%
+        top: $offset
+        bottom: 0
+        transition: left 0.3s
+        &.active
+            left: 0
+        .menu
+            display: block
+            li
+                margin: 20px 0
+        .header__phone
+            margin: 30px 0 0
+    .provocation
+        &__title
+            font-size: 107px
+            line-height: 1.1
+        &__banner
+            top: unset
+            right: -60px
+            bottom: -209px
+            img
+                width: 585px
+                height: auto
+
+@media screen and (max-width: 992px)
+    .container 
+        max-width: 720px
+    .provocation
+        min-height: 690px
+        &__title
+            font-size: 71px
+        &__subtext
+            width: 583px
+        &__banner
+            right: -91px
+            img
+                width: 455px
+    .title
+        font-size: 41px
+    .info
+        &__list
+            flex-direction: column
+            justify-content: center
+        &__item
+            &:nth-child(2)
+                order: -1
+        &__text
+            margin-top: 25px
+                
+
+
+@media screen and (max-width: 767px)
+    .container 
+        max-width: 540px
+    .provocation
+        min-height: 400px
+        text-align: center
+        &__title
+            font-size: 71px
+            width: 100%
+        &__subtext
+            width: 100%
+        &__banner
+            position: static
+            margin-top: 30px
+            img
+                max-width: 400px
+                width: 100%
+        &__info
+            margin-top: 30px
+    .title
+        font-size: 30px
+    .info
+        padding: 90px 0
+
+@media screen and (max-width: 576px)
+    .container 
+        max-width: 100%
+    .mob-menu
+        max-width: 275px
+        
+    .provocation
+        padding-top: 80px
+        &__title
+            font-size: 12vw
+        &__subtext
+            font-size: 20px
+        &__banner
+            position: static
+            margin-top: 30px
+            img
+                max-width: 400px
+                width: 100%
+        &__info
+            margin-top: 30px
+            .big-text
+                font-size: 30px
+    .title
+        font-size: 28px
+        line-height: 1.4
+    .info
+        padding: 70px 0
+        &__item
+            &:first-child, &:last-child
+                padding-top: 80px
+            &:nth-child(2)
+                .info__text
+                    font-size: 26px
+                    line-height: 1.2
+                    .orange 
+                        font-size: 24px
+        &__text
+            margin-top: 10px
